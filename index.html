@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agripah Zimudzo | Sales & Marketing Professional</title>
+
+    <meta name="description" content="Agripah Zimudzo - Sales and Marketing Professional specialising in Business Development, Customer Experience, Sales, Marketing and Client Relationship Management.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f8f8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #111;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                        linear-gradient(135deg, #222, #555);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+            color: #eee;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #111;
+            padding: 13px 28px;
+            margin: 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #111;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid #d4af37;
+        }
+
+        .btn-outline:hover {
+            background: #d4af37;
+            color: #111;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: #d4af37;
+            margin: auto;
+        }
+
+        /* ABOUT */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 950px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #b08b00;
+            font-weight: bold;
+        }
+
+        /* SERVICES */
+        .services {
+            background: #f5f5f5;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #111;
+            margin-bottom: 12px;
+        }
+
+        .service-card .icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        /* EXPERIENCE */
+        .experience {
+            background: white;
+        }
+
+        .timeline {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .job {
+            border-left: 4px solid #d4af37;
+            padding: 0 0 40px 30px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .job::before {
+            content: "";
+            position: absolute;
+            left: -11px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: #d4af37;
+            border-radius: 50%;
+        }
+
+        .job h3 {
+            font-size: 24px;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .job h4 {
+            color: #b08b00;
+            margin-bottom: 5px;
+        }
+
+        .job .date {
+            color: #777;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .job ul {
+            margin-left: 20px;
+        }
+
+        .job li {
+            margin-bottom: 8px;
+        }
+
+        /* EDUCATION */
+        .education {
+            background: #f5f5f5;
+        }
+
+        .education-card {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-left: 5px solid #d4af37;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .education-card h3 {
+            color: #111;
+            margin-bottom: 8px;
+        }
+
+        /* SKILLS */
+        .skills {
+            background: white;
+        }
+
+        .skills-grid {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .skill {
+            background: #f5f5f5;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #111;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-content p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin: 30px 0;
+        }
+
+        .contact-info div {
+            margin: 12px 0;
+        }
+
+        .contact-info strong {
+            color: #d4af37;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #050505;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .service-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 29px;
+            }
+
+            .job h3 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">AGRIPAH ZIMUDZO</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Agripah Zimudzo</h1>
+
+            <h2>Sales & Marketing Professional | Business Development | Customer Experience</h2>
+
+            <p>
+                Results-driven Sales and Marketing professional with experience
+                in telecommunications, insurance, customer service, business
+                development and client relationship management.
+            </p>
+
+            <a href="#experience" class="btn">View My Experience</a>
+
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="section-title">
+            <h2>About Me</h2>
+            <span></span>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                I am a dedicated <span class="highlight">Sales and Marketing Professional</span>
+                with practical experience in customer acquisition, sales,
+                client service, marketing campaigns and business development.
+            </p>
+
+            <p>
+                My professional background includes working with leading
+                organisations such as <span class="highlight">NetOne Cellular,
+                TelOne and First Mutual Life Assurance</span>.
+            </p>
+
+            <p>
+                I have developed strong skills in customer relationship
+                management, sales promotion, market awareness, customer
+                retention, data management and communication.
+            </p>
+
+            <p>
+                I hold a <span class="highlight">Bachelor of Commerce Honours
+                Degree in Marketing</span> from Zimbabwe Ezekiel Guti University.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
+        <div class="section-title">
+            <h2>Professional Expertise</h2>
+            <span></span>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="icon">📈</div>
+                <h3>Sales & Business Development</h3>
+                <p>
+                    Customer acquisition, sales generation, lead development,
+                    relationship building and achievement of sales objectives.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">📣</div>
+                <h3>Marketing</h3>
+                <p>
+                    Product promotion, marketing campaigns, customer awareness,
+                    market engagement and promotional activities.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🤝</div>
+                <h3>Customer Experience</h3>
+                <p>
+                    Client service, customer relationship management,
+                    communication, retention and problem solving.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">📊</div>
+                <h3>Market Research</h3>
+                <p>
+                    Customer feedback, market information gathering,
+                    competitor awareness and identification of opportunities.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">💼</div>
+                <h3>Account Management</h3>
+                <p>
+                    Maintaining professional client relationships, supporting
+                    customer needs and identifying opportunities for growth.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">💡</div>
+                <h3>Customer Acquisition</h3>
+                <p>
+                    Creating awareness of products and services and converting
+                    prospects into customers through effective engagement.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section class="experience" id="experience">
+
+        <div class="section-title">
+            <h2>Professional Experience</h2>
+            <span></span>
+        </div>
+
+        <div class="timeline">
+
+
+            <!-- NETONE -->
+            <div class="job">
+
+                <h3>NetOne Cellular</h3>
+
+                <h4>Data Capturer Clerk – OneMoney</h4>
+
+                <div class="date">2021 – 2025</div>
+
+                <ul>
+                    <li>
+                        Captured, updated and maintained accurate customer
+                        and business information.
+                    </li>
+
+                    <li>
+                        Supported customer data management and administrative
+                        processes within the OneMoney environment.
+                    </li>
+
+                    <li>
+                        Participated in marketing blitzes to create awareness
+                        of OneMoney products and services.
+                    </li>
+
+                    <li>
+                        Conducted customer engagement activities in areas
+                        including Mbare, Glenview and Epworth.
+                    </li>
+
+                    <li>
+                        Assisted customers with product information and
+                        encouraged adoption of digital financial services.
+                    </li>
+
+                    <li>
+                        Worked with teams to support customer acquisition,
+                        product awareness and service delivery.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- TELONE -->
+            <div class="job">
+
+                <h3>TelOne</h3>
+
+                <h4>Client Service Representative – Mutare Branch</h4>
+
+                <div class="date">2018 – 2019</div>
+
+                <ul>
+                    <li>
+                        Provided professional customer service and support
+                        to TelOne clients.
+                    </li>
+
+                    <li>
+                        Assisted customers with enquiries regarding products
+                        and telecommunications services.
+                    </li>
+
+                    <li>
+                        Built positive relationships with customers through
+                        effective communication and problem solving.
+                    </li>
+
+                    <li>
+                        Supported customer retention by responding to client
+                        needs and service concerns.
+                    </li>
+
+                    <li>
+                        Promoted TelOne products and services to customers
+                        and identified opportunities for additional business.
+                    </li>
+
+                    <li>
+                        Maintained accurate customer information and supported
+                        administrative activities within the branch.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- FIRST MUTUAL -->
+            <div class="job">
+
+                <h3>First Mutual Life Assurance</h3>
+
+                <h4>Sales Representative – Taquoise Unit</h4>
+
+                <div class="date">2021</div>
+
+                <ul>
+                    <li>
+                        Promoted life assurance products to prospective and
+                        existing customers.
+                    </li>
+
+                    <li>
+                        Identified potential clients and developed customer
+                        relationships.
+                    </li>
+
+                    <li>
+                        Explained insurance products and benefits to prospective
+                        customers.
+                    </li>
+
+                    <li>
+                        Supported customer acquisition through direct sales
+                        and relationship-building activities.
+                    </li>
+
+                    <li>
+                        Followed up with prospective clients and maintained
+                        professional customer relationships.
+                    </li>
+
+                    <li>
+                        Worked towards achieving sales and customer acquisition
+                        objectives.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section class="education" id="education">
+
+        <div class="section-title">
+            <h2>Education</h2>
+            <span></span>
+        </div>
+
+        <div class="education-card">
+
+            <h3>Bachelor of Commerce Honours Degree in Marketing</h3>
+
+            <p>
+                <strong>Zimbabwe Ezekiel Guti University</strong>
+            </p>
+
+            <p>
+                Bindura, Zimbabwe
+            </p>
+
+            <br>
+
+            <h3>Zimbabwe General Certificate of Education – Ordinary Level</h3>
+
+            <p>
+                7 O Level passes including Mathematics and English.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="skills">
+
+        <div class="section-title">
+            <h2>Core Skills</h2>
+            <span></span>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill">Sales & Marketing</div>
+
+            <div class="skill">Business Development</div>
+
+            <div class="skill">Customer Service</div>
+
+            <div class="skill">Client Relationship Management</div>
+
+            <div class="skill">Customer Acquisition</div>
+
+            <div class="skill">Customer Retention</div>
+
+            <div class="skill">Market Research</div>
+
+            <div class="skill">Communication</div>
+
+            <div class="skill">Negotiation</div>
+
+            <div class="skill">Problem Solving</div>
+
+            <div class="skill">Data Management</div>
+
+            <div class="skill">Microsoft Office</div>
+
+            <div class="skill">Report Preparation</div>
+
+            <div class="skill">Teamwork</div>
+
+            <div class="skill">Time Management</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+            <h2>Contact Me</h2>
+            <span></span>
+        </div>
+
+        <div class="contact-content">
+
+            <p>
+                I am open to opportunities in Sales, Marketing,
+                Business Development, Account Management and Customer Experience.
+            </p>
+
+            <div class="contact-info">
+
+                <div>
+                    <strong>Location:</strong>
+                    Harare, Zimbabwe
+                </div>
+
+                <div>
+                    <strong>Phone:</strong>
+                    +263 776 725 617
+                </div>
+
+                <div>
+                    <strong>Alternative Phone:</strong>
+                    +263 719 614 496
+                </div>
+
+                <div>
+                    <strong>Email:</strong>
+                    azimudzo@gmail.com
+                </div>
+
+            </div>
+
+            <a href="mailto:azimudzo@gmail.com" class="btn">
+                Email Me
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 <span>Agripah Zimudzo</span>.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Sales & Marketing Professional | Business Development | Customer Experience
+        </p>
+
+    </footer>
+
+
+    <!-- SIMPLE JAVASCRIPT -->
+    <script>
+
+        document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+
+            link.addEventListener('click', function(event) {
+
+                event.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
